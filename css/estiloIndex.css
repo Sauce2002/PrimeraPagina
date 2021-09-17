@@ -14,11 +14,41 @@ header ul li a{
     text-decoration-line: none;
     display: block;
     padding: 12px;
+    font-family: cursive;
 }
 
 header ul li a:hover{
     background-color: purple;
 }
+
+body{
+    margin: 0px;
+}
+
+
+/*******ESTILO DEL ICONO MENÚ******/
+.fa-bars{
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 2rem;
+    opacity: 0;
+
+}
+input[type="checkbox"]{
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 2rem;
+    display: none;
+}
+
+
 
 /* estilo contenedor */
 #contenedor {
@@ -27,12 +57,55 @@ header ul li a:hover{
 }
 
 
-
+/* --------------------media queris----------------- */
 @media only screen and (max-width: 650px){
     #contenedor {
         width: 100%;
     }
 }
+
+/* estilo menu */
+
+#menu2{
+    width: 120px;
+    position: absolute;
+    right: 0px;
+    display: none;
+}
+
+/* estilo imagenes */
+#img2{
+    display: none;
+    width: 320px;
+
+}
+
+
+@media only screen and (max-width:650px){
+    .fa-bars{
+        opacity: 1;
+    }
+    #img1{
+        display: none;
+    }
+    #img2{
+        display: block;
+    }
+    #contenedor {
+        width: 100%;
+    }
+    #menu1 ul li {
+        opacity: 0;
+        
+    }
     
 
+    input[type="checkbox"]{
+        display: block;
+        opacity: 0;
+    }
+}
 
+input:checked~#menu2{
+    display: block;
+}
